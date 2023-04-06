@@ -1,19 +1,5 @@
 # Substrate Node Template
 
-A fresh [Substrate](https://substrate.io/) node, ready for hacking :rocket:
-
-A standalone version of this template is available  for each release of Polkadot in the [Substrate Developer Hub  Parachain Template](https://github.com/substrate-developer-hub/substrate-parachain-template/) repository.
-The parachain template is generated directly at each Polkadot release branch form the [Node Template in Substreate](https://github.com/paritytech/substrate/tree/master/bin/node-template) upstream
-
-It is usually best to to use the stand-alone version to start a new project.
-All bugs, suggestions, and feature requests should be made upstream in the [Substrate](https://github.com/paritytech/substrate/tree/master/bin/node-template) repository.
-
-## Getting Started
-
-Depending on your operating system and Rust version, there might be additional packages required to compile this template.
-Check the [Install](https://docs.substrate.io/install/) instructions for your platform for the most common dependencies.
-Alternatively, you can use one of the [alternative installation](#alternatives-installations) options.
-
 ### Build
 
 Use the following command to build the node without launching it:
@@ -56,14 +42,6 @@ To start the development chain with detailed logging, run the following command:
 RUST_BACKTRACE=1 ./target/release/node-template -ldebug --dev
 ```
 
-Development chains:
-
-- Maintain state in a `tmp` folder while the node is running.
-- Use the **Alice** and **Bob** accounts as default validator authorities.
-- Use the **Alice** account as the default `sudo` account.
-- Are preconfigured with a genesis state (`/node/src/chain_spec.rs`) that includes several prefunded development accounts.
-
-
 To persist chain state between runs, specify a base path by running a command similar to the following:
 
 ```sh
@@ -85,8 +63,6 @@ db keystore network
 ### Connect with Polkadot-JS Apps Front-End
 
 After you start the node template locally, you can interact with it using the hosted version of the [Polkadot/Substrate Portal](https://polkadot.js.org/apps/#/explorer?rpc=ws://localhost:9944) front-end by connecting to the local node endpoint.
-A hosted version is also available on [IPFS (redirect) here](https://dotapps.io/) or [IPNS (direct) here](ipns://dotapps.io/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer).
-You can also find the source code and instructions for hosting your own instance on the [polkadot-js/apps](https://github.com/polkadot-js/apps) repository.
 
 ### Multi-Node Local Testnet
 
